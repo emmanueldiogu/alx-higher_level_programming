@@ -14,7 +14,8 @@ if (last_digit > 5):
 elif (last_digit == 0):
     msg += "0"
     print(msg)
-# if the last digit is less than 6 and not 0: the string and is less than 6 and not 0
+# if the last digit is less than 6 and not 0:
+# the string and is less than 6 and not 0
 elif (last_digit < 6 and last_digit != 0):
     msg += "less than 6 and not 0"
     print(msg)

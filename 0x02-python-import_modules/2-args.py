@@ -10,5 +10,6 @@ def do_something():
         print("{}: {}".format(count, i))
         count += 1
 
+
 if __name__ == "__main__":
     do_something()

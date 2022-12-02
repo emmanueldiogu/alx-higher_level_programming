@@ -3,6 +3,7 @@
 from sys import argv, exit
 from calculator_1 import add, sub, mul, div
 
+
 def basic_operations():
     ops = {"+": add, "-": sub, "*": mul, "/": div}
 
@@ -15,7 +16,7 @@ def basic_operations():
 
     a = int(argv[1])
     b = int(argv[3])
-    
+
     print("{} {} {} = {}".format(a, argv[2], b, ops[argv[2]](a, b)))
 
 

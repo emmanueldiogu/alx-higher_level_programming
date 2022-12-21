@@ -49,13 +49,13 @@ class Square:
         return (self.__size * self.__size)
 
     def my_print(self):
-        """Print square matrix"""
+        """Print the square with the # character."""
         if self.__size == 0:
-            print('')
+            print("")
             return
-        for blank in range(0, self.position[1]):
-            print()
+
+        [print("") for i in range(0, self.__position[1])]
         for i in range(0, self.__size):
-            print(" " * self.position[0], end='')
-            print("#" * self.__size)
-            print('')
+            [print(" ", end="") for j in range(0, self.__position[0])]
+            [print("#", end="") for k in range(0, self.__size)]
+            print("")

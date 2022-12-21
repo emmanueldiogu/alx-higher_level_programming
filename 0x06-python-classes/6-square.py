@@ -11,13 +11,8 @@ class Square:
             size (int): The size of the new square.
             position (int, int): The position of the new square.
         """
-        if (type(size) is not int):
-            raise (TypeError('size must be an integer'))
-        elif (size < 0):
-            raise (ValueError('size must be >= 0'))
-        else:
-            self.__size = size
-            self.__position = position
+        self.__size = size
+        self.__position = position
 
     @property
     def size(self):
@@ -34,21 +29,6 @@ class Square:
         else:
             self.__size = value
 
-    def area(self):
-        """Calculate square of size"""
-        return self.__size ** 2
-
-    def my_print(self):
-        """Print square matrix"""
-        if self.__size > 0:
-            for blank in range(self.position[1]):
-                print()
-            for i in range(self.__size):
-                print(" " * self.position[0], end='')
-                print("#" * self.__size)
-        else:
-            print()
-
     @property
     def position(self):
         """Private position getter"""
@@ -57,10 +37,24 @@ class Square:
     @position.setter
     def position(self, value):
         """Private position setter"""
-        if (len(value) != 2) or (type(value) is not tuple) \
-                or (type(value[0]) is not int) \
-                or (type(value[1]) is not int) \
-                or (value[0] < 0) or (value[1] < 0):
+        if (not isinstance(value, tuple) or len(value) != 2
+                or all(isinstance(num, int) for num in value)
+                or all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
+
+    def area(self):
+        """Calculate square of size"""
+        return (self.__size * self.__size)
+
+    def my_print(self):
+        """Print square matrix"""
+        if self.__size == 0:
+            print()
+            return
+        for blank in range(self.position[1]):
+            print()
+        for i in range(self.__size):
+            print(" " * self.position[0], end='')
+            print("#" * self.__size)

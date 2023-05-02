@@ -8,8 +8,8 @@ class Rectangle:
     """Defines a rectangle"""
 
     def __init__(self, width, height):
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -40,10 +40,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
-
-    def __str__(self):
-        """Return a string representation of the rectangle."""
-        return "{{'_Rectangle__height': {}, '_Rectangle__width': {}}}".format(self.__height, self.__width)
 
     def area(self):
         """area of a rectangle

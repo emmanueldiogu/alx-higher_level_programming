@@ -8,8 +8,8 @@ class Rectangle:
     """Defines a rectangle"""
 
     def __init__(self, width, height):
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     def __repr__(self) -> str:
         return f"Rectangle({self.width}, {self.height})"

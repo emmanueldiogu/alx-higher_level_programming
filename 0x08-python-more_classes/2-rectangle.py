@@ -52,5 +52,9 @@ class Rectangle:
         """perimeter of a rectangle
         perimeter = 2(width + height)
         """
-        perimeter = 2 * (self.width + self.height)
+        perimeter = 0
+        if self.height == 0 or self.width == 0:
+            return perimeter
+        else:
+            perimeter = 2 * (self.width + self.height)
         return perimeter

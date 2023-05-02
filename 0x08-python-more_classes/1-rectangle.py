@@ -40,3 +40,9 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
+
+    def __str__(self):
+        """Return a string representation of the rectangle."""
+        return "{{'_Rectangle__height': {}, '_Rectangle__width': {}}}".format(
+            self.__height, self.__width
+        )

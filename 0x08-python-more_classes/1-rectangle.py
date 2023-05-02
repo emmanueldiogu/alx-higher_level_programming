@@ -15,19 +15,6 @@ class Rectangle:
     def width(self):
         """Get the current width of the square."""
         return self._Rectangle__width
-    
-    def __setattr__(self, name, value):
-        if name == 'width' and value < 0:
-            raise ValueError("width must be >= 0")
-        elif name == 'height' and value < 0:
-            raise ValueError("height must be >= 0")
-        else:
-            object.__setattr__(self, name, value)
-
-        if name == 'width' and hasattr(self, 'height'):
-            object.__setattr__(self, 'height', self.height)
-        elif name == 'height' and hasattr(self, 'width'):
-            object.__setattr__(self, 'width', self.width)
 
     @width.setter
     def width(self, value):

@@ -6,6 +6,7 @@ Write a class Rectangle that defines a rectangle by: (based on 0-rectangle.py)
 
 class Rectangle:
     """Defines a rectangle"""
+
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -13,7 +14,7 @@ class Rectangle:
     @property
     def width(self):
         """Get the current width of the square."""
-        return (self.__width)
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -28,7 +29,7 @@ class Rectangle:
     @property
     def height(self):
         """Get the current height of the square."""
-        return (self.__height)
+        return self.__height
 
     @height.setter
     def height(self, value):

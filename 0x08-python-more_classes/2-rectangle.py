@@ -54,15 +54,3 @@ class Rectangle:
         """
         perimeter = 2 * (self.width + self.height)
         return perimeter
-
-    def print_rectangle(self):
-        if self.width == 0 or self.height == 0:
-            return ""
-        else:
-            rectangle = ""
-            for i in range(self.height):
-                for j in range(self.width):
-                    rectangle += "#"
-                if i != self.height - 1:
-                    rectangle += "\n"
-            return rectangle

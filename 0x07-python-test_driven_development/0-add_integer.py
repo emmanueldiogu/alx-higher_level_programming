@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 """Function that adds 2 integers
-A function that adds 2 integers or float
-but returns an integer.
-Returns TypeError for non integer or float values
 """
 
 
